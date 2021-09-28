@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .img {
+        display: flex;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<body>
+    <header>
+        Presionas "Control shift p" al tiempo y aparece un menu arriba
+    </header>
+    <main>
+        <section>
+            <img id="imagencita" class="img" src="https://picsum.photos/200/300" alt="imagen prueba">
+        </section>
+    </main>
+    <aside>
+        HOLA SOY UN ASIDE
+    </aside>
+    <footer>
+        HOLA SOY UN FOOTER
+    </footer>
+    <script>
+        $(document).ready(() => {
+            console.log($('body').children());
+            $('body').children().hide();
+            let body = $('body').children();
+
+            let boolean = true;
+            for(let i = 0; i < body.length; i++) {
+                    let element = body.eq(i);
+                    element.delay(i * 500).fadeIn(2000);
+            }
+
+        });
+    </script>
+</body>
+
+</html>
