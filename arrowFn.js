@@ -14,7 +14,7 @@ const r = new Fn();
 //------------------------------------------------------------
 // fat arrow function
 
-console.log(this);
+//console.log(this);
 const fatFn = () => { //No tienen contexto
     const obj = {}
     this.prop = 'propiedad';
@@ -22,7 +22,7 @@ const fatFn = () => { //No tienen contexto
     return obj;
 }
 const r1 = fatFn();
-console.log(this);
+//console.log(this);
 
 //console.log(r1);
 
@@ -31,4 +31,17 @@ console.log(this);
 
 const fnR = () => 2
 
-console.log(fnR());
+//console.log(fnR());
+
+const hol = function (){
+    this.holita = 'holita'
+    console.log(this);
+}
+
+const hol2 = ()=>{
+    console.log(this);
+}
+
+hol();
+
+hol2();
